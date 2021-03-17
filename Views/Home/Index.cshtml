@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ImageFiligran.Models.Picture>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="~/Home/Update/@item.Id" target="_blank">
+                        <img src="~/img/@item.ImageUrl" style="width:300px;height:600px;" title="@item.Title" alt="@item.ImageUrl" />
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
